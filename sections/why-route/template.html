@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ليه Route؟</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --primary:#00298E; --primary-deep:#001F6B;
+  --cyan:#1AA0DB; --cyan-soft:#E6F4FB;
+  --ink:#0E1320; --body:#4A5366; --muted:#5A6378;
+  --line:#E4E7EE; --alt:#E9F4FF; --alt-line:#D3E6FA;
+  --font:'IBM Plex Sans Arabic',Tahoma,'Segoe UI',sans-serif;
+  /* the Hairline palette, in Route's blues */
+  --hairline-plate:#FFFFFF; --hairline-hi:#00298E; --hairline-edge:#7F93BF;
+  --hairline-mid:#B9C6E0; --hairline-lo:#DDE5F3; --hairline-stroke:1;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+/* ── ليه Route؟ ── */
+.why{padding:96px 16px;background:var(--alt)}
+.why .wrap{max-width:1200px;margin:0 auto}
+.why-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.why .eyebrow{display:inline-block;padding:4px 14px;border-radius:999px;background:#fff;border:1px solid var(--alt-line);color:var(--primary);font-size:14px;font-weight:600}
+.why h2{margin:14px 0 10px;font-size:clamp(28px,4vw,42px);line-height:1.3;font-weight:700;text-wrap:balance}
+.why-head p{margin:0;color:var(--body)}
+
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(200px,auto);gap:16px}
+.tile{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--alt-line);border-radius:24px;padding:28px;overflow:hidden}
+.tile h3{margin:0 0 6px;font-size:22px;line-height:1.4;font-weight:700}
+.tile p{margin:0;color:var(--body);font-size:16px}
+.tile .tag{font-size:13px;font-weight:600;color:var(--cyan)}
+
+.t-steps{grid-column:span 2;grid-row:span 2}
+.t-keys{grid-column:span 2;display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:8px}
+
+/* the figure's plate and its read-out, as on the bench */
+.fig{position:relative;flex:1;display:flex;align-items:center;justify-content:center;min-height:0}
+.fig [data-hairline]{width:100%;max-width:560px;cursor:crosshair}
+.t-keys .fig [data-hairline]{max-width:none}
+.read{position:absolute;top:0;inset-inline-start:0;margin-top:8px;font:600 13px/1 var(--font);color:var(--hairline-edge);letter-spacing:.02em;transition:color .26s}
+.fig:hover .read{color:var(--primary)}
+
+.t-stat{justify-content:space-between;background:var(--primary);border-color:var(--primary);color:#fff}
+.t-stat .big{direction:ltr;text-align:end;font-size:clamp(56px,6vw,76px);font-weight:700;line-height:1;letter-spacing:-.02em}
+.t-stat p{color:#C9D5F2}
+.t-stat .tag{color:var(--sky,#7FD3F5)}
+
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:auto;padding-top:20px}
+.mini div{border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.mini b{display:block;direction:ltr;text-align:end;font-size:26px;line-height:1.2;color:var(--primary)}
+.mini span{font-size:14px;color:var(--muted)}
+
+.t-cert .seal{width:56px;height:56px;margin-bottom:auto;color:var(--primary)}
+.t-cert .seal + div{margin-top:24px}
+
+@media (max-width:900px){
+  .bento{grid-template-columns:1fr 1fr}
+  .t-steps,.t-keys{grid-column:1 / -1}
+}
+@media (max-width:600px){
+  .why{padding:64px 16px}
+  .bento{grid-template-columns:1fr}
+  .t-steps{grid-row:auto}
+  .t-keys{grid-template-columns:1fr}
+  .tile{padding:22px}
+}
+</style>
+</head>
+<body>
+
+<section class="why" id="why" aria-labelledby="whyTitle">
+  <div class="wrap">
+    <div class="why-head">
+      <span class="eyebrow">ليه Route؟</span>
+      <h2 id="whyTitle">مش بس كورس… طريق كامل لحد أول شغلانة</h2>
+      <p>من أول سطر كود لحد ما تستلم عرض الشغل، معاك في كل خطوة.</p>
+    </div>
+
+    <div class="bento">
+      <article class="tile t-steps">
+        <span class="tag">المنهج</span>
+        <h3>من 0 لـ 1، خطوة بخطوة</h3>
+        <p>5 مراحل واضحة، وكل مرحلة بتخلص بمشروع حقيقي يتضاف لـ Portfolio بتاعك.</p>
+        <div class="fig"><span class="read" data-read="steps"></span><div data-fig="steps"></div></div>
+      </article>
+
+      <article class="tile t-stat">
+        <span class="tag">خريجين</span>
+        <div class="big">56K+</div>
+        <div>
+          <h3>خريج في سوق الشغل</h3>
+          <p>اتعلموا معانا واشتغلوا في شركات جوه مصر وبرّه.</p>
+        </div>
+      </article>
+
+      <article class="tile t-cert">
+        <svg class="seal" viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <circle cx="28" cy="22" r="14"/><circle cx="28" cy="22" r="9"/><path d="m24 22 3 3 5-6"/><path d="M19 33 15 50l7-3 4 6 2-14M37 33l4 17-7-3-4 6-2-14"/>
+        </svg>
+        <div>
+          <h3>شهادة معتمدة من Route</h3>
+          <p>في آخر كل تراك، تثبت بيها اللي اتعلمته.</p>
+        </div>
+      </article>
+
+      <article class="tile t-keys">
+        <div>
+          <span class="tag">التطبيق</span>
+          <h3>تطبيق عملي في كل محاضرة</h3>
+          <p>مفيش محاضرة نظري وبس، كل فكرة بتكتبها بإيدك على جهازك، والمدرّب جنبك.</p>
+        </div>
+        <div class="fig"><span class="read" data-read="keys"></span><div data-fig="keys"></div></div>
+      </article>
+
+      <article class="tile t-career">
+        <span class="tag">التوظيف</span>
+        <h3>دعم في التوظيف</h3>
+        <p>CV، Mock interviews، وترشيحات لشركات بتدوّر على جونيورز.</p>
+        <div class="mini">
+          <div><b>12+</b><span>سنة خبرة</span></div>
+          <div><b>170+</b><span>مدرّب خبير</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+/*KERNEL*/
+</script>
+<script>
+/*
+ * The host: the bench's mount, once per tile. Each figure takes the stage in
+ * its tile and writes its read-out to the tile's corner; it is set at the
+ * middle of its range, the value the bench starts at.
+ */
+/* the read-out, said in Arabic; at rest the tile stays quiet */
+const say = (t) => {
+  if (t === "rest" || t === "deck") return "";
+  const m = t.match(/^stage (\d)$/);
+  if (m) return `المرحلة ${m[1]} من 5`;
+  return { enter: "Enter", space: "Space" }[t] || "";
+};
+window.hairline = (figure) => {
+  const stage = document.querySelector(`[data-fig="${figure.name}"]`);
+  const out = document.querySelector(`[data-read="${figure.name}"]`);
+  if (!stage) return;
+  HL.inject(document);
+  stage.setAttribute("data-hairline", figure.name);
+  stage.setAttribute("data-hairline-theme", "light");
+  stage.setAttribute("role", "img");
+  stage.setAttribute("aria-label", figure.means);
+  const svg = HL.mk("svg", { viewBox: "0 0 400 320", "aria-hidden": "true" }, stage);
+  let text = null;
+  const read = {
+    get textContent() { return text; },
+    set textContent(v) { text = v == null ? "" : String(v); out.textContent = say(text); },
+  };
+  figure.mount({ stage, svg, read }, figure.range[1]);
+  if (text === null) read.textContent = "rest";
+};
+</script>
+<script type="module">
+/*STEPS*/
+</script>
+<script type="module">
+/*KEYS*/
+</script>
+</body>
+</html>
