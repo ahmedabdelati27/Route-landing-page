@@ -1,0 +1,267 @@
+/* =============================================================================
+   Route — Design Tokens
+   Source of truth: Figma "Route Landing Page (Copy)" → Variables → collection "Mapped"
+   (Light Mode / Dark Mode). Values below are the resolved hex of each Figma alias.
+
+   Naming: Figma "Group/Name" → --color-group-name (typos in Figma names are fixed
+   here, e.g. "Defualt" → default, "Succes" → success, "Foucs" → focus).
+   The Figma name is kept in the comment next to each token.
+
+   Theme switching:
+     - Light is the default.
+     - Dark applies with  <html data-theme="dark">
+     - If no data-theme is set, the OS preference (prefers-color-scheme) is used.
+     - <html data-theme="light"> forces light even on a dark OS.
+   Read DESIGN_SYSTEM.md before using these tokens.
+   ============================================================================= */
+
+:root {
+  /* ---------- Surfaces (backgrounds) ---------- */
+  --color-surface-page: #ffffff;            /* Surface/Page — the page itself */
+  --color-surface-background: #f2f2f2;      /* Surface/Background — app/dashboard canvas behind cards */
+  --color-surface-card: #ffffff;            /* Surface/Card — cards, panels, sidebars (elevation 1) */
+  --color-surface-shade-1: #f2f2f2;         /* Surface/Shade 1 — subtle fills inside cards, chips */
+  --color-surface-shade-2: #e5e5e5;         /* Surface/Shade 2 — raised element on a card, hover, input, thumbnails */
+  --color-surface-shade-3: #cccccc;         /* Surface/Shade 3 — highest level: tooltip, selected */
+  --color-surface-action: #00298e;          /* Surface/Action - Defualt — primary buttons, active chips */
+  --color-surface-action-hover: #002581;    /* Surface/Action - Hover */
+  --color-surface-action-light: #e9f4ff;    /* Surface/Action-Light — light brand tint: card headers, pills, selected */
+  --color-surface-disabled: #e5e5e5;        /* Surface/Disabled */
+  --color-surface-success: #03a853;         /* Surface/Sucess - Defualt */
+  --color-surface-success-light: #e6fbf0;   /* Surface/Sucess - Light */
+  --color-surface-error: #ff4e64;           /* Surface/Error- Defualt */
+  --color-surface-error-light: #ffedf0;     /* Surface/Error- Light */
+  --color-surface-warning: #ff6b00;         /* Surface/Warning-Defualt */
+  --color-surface-warning-light: #fff1e6;   /* Surface/Warning-Light */
+
+  /* ---------- Text ---------- */
+  --color-text-headings: #191919;           /* Text/Headings */
+  --color-text-body-1: #666666;             /* Text/Body 1 — paragraphs */
+  --color-text-body-2: #808080;             /* Text/Body 2 */
+  --color-text-body-3: #999999;             /* Text/Body 3 — captions, meta */
+  --color-text-body-4: #b3b3b3;             /* Text/Body 4 — placeholders */
+  --color-text-action: #00298e;             /* Text/Action — links, accent words */
+  --color-text-action-hover: #002581;       /* Text/Action-Hover */
+  --color-text-on-action: #ffffff;          /* Text/On-action — text on --color-surface-action */
+  --color-text-disabled: #999999;           /* Text/Disabled */
+  --color-text-info: #000aff;               /* Text/Info */
+  --color-text-success: #04d268;            /* Text/Succes */
+  --color-text-warning: #ff6b00;            /* Text/Warning */
+  --color-text-error: #ff4e64;              /* Text/Error */
+  --color-text-eyebrow: #00b2e4;            /* Secondary/300 — section labels above titles ("Why Route?"). Same in both modes. */
+
+  /* ---------- Icons ---------- */
+  --color-icon-heading: #333333;            /* Icons/Heading */
+  --color-icon-default: #666666;            /* Icons/Defualt */
+  --color-icon-secondary: #808080;          /* Icons/Secondary */
+  --color-icon-tertiary: #999999;           /* Icons/Tertiary */
+  --color-icon-subtle: #b3b3b3;             /* Icons/Subtle */
+  --color-icon-action: #00298e;             /* Icons/Action — brand icons, decorative patterns, logo letters */
+  --color-icon-action-hover: #002581;       /* Icons/Action-Hover */
+  --color-icon-on-action: #ffffff;          /* Icons/On-action */
+  --color-icon-disabled: #999999;           /* Icons/Disabled */
+  --color-icon-info: #000aff;               /* Icons/Info */
+  --color-icon-success: #03a853;            /* Icons/Succes */
+  --color-icon-warning: #ff6b00;            /* Icons/Warning */
+  --color-icon-error: #ff4e64;              /* Icons/Error */
+
+  /* ---------- Borders ---------- */
+  --color-border-default: #e5e5e5;          /* Border/Defualt */
+  --color-border-white: #ffffff;            /* Border/White */
+  --color-border-action: #00298e;           /* Border/Action - Defualt — outline buttons */
+  --color-border-action-hover: #002581;     /* Border/Action - Hover */
+  --color-border-action-light: #e9f4ff;     /* Border/Action - Light */
+  --color-border-focus: #00298e;            /* Border/Foucs — focus rings */
+  --color-border-disabled: #b3b3b3;         /* Border/Disabled */
+  --color-border-success: #d9f8e8;          /* Border/Success */
+  --color-border-error: #ffe4e8;            /* Border/Error */
+  --color-border-warning: #ffe1cc;          /* Border/Warning */
+  --color-border-info: #ccceff;             /* Border/Info */
+
+  /* ---------- Fixed (same in both modes — never theme these) ---------- */
+  --color-fixed-white: #ffffff;             /* chips inside blue buttons, logo plates, partner pills */
+  --color-fixed-brand: #00298e;             /* brand-filled cards that stay blue in dark */
+
+  /* ---------- Effects ---------- */
+  --shadow-1: 0 6px 15px rgba(0, 0, 0, 0.10);   /* Effect style "shadow 1" */
+  --shadow-subtle: -2px 0 4px rgba(0, 0, 0, 0.04); /* Effect style "1" */
+
+  /* ---------- Radius / border width (Figma "Alias") ---------- */
+  --radius-xs: 1px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --border-sm: 1px;
+  --border-md: 2px;
+  --border-lg: 4px;
+
+  /* ---------- Typography ---------- */
+  --font-family: 'Urbanist', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-family-arabic: 'IBM Plex Sans Arabic', 'Urbanist', system-ui, sans-serif;
+
+  /* Desktop scale (Figma text styles) */
+  --text-display-1: 48px;   /* Display/D1 — hero */
+  --text-display-2: 40px;   /* Display/D2 — section titles (desktop) */
+  --text-h1: 32px;
+  --text-h2: 24px;
+  --text-h3: 20px;
+  --text-h4: 18px;
+  --text-b1: 16px;
+  --text-b2: 14px;
+  --text-b3: 12px;
+  --leading-tight: 1.2;     /* headings / UI */
+  --leading-body: 1.5;      /* paragraphs (Paragraph/P1, Lead) */
+
+  /* Section header roles — swap at the mobile breakpoint below */
+  --section-eyebrow-size: 20px;
+  --section-title-size: 40px;
+  --section-desc-size: 16px;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --section-pad-x: 80px;
+  --section-pad-y: 80px;
+  --gutter: 24px;
+
+  color-scheme: light;
+}
+
+/* ============================== DARK ====================================== */
+/* Values duplicated in two selectors on purpose: explicit choice + OS default. */
+[data-theme="dark"] {
+  --color-surface-page: #000000;
+  --color-surface-background: #000000;
+  --color-surface-card: #191919;
+  --color-surface-shade-1: #191919;
+  --color-surface-shade-2: #333333;
+  --color-surface-shade-3: #4d4d4d;
+  --color-surface-action: #3354a5;
+  --color-surface-action-hover: #5470b3;
+  --color-surface-action-light: #1c2431;
+  --color-surface-disabled: #e5e5e5;
+  --color-surface-success: #03a853;
+  --color-surface-success-light: #014a24;
+  --color-surface-error: #ff4e64;
+  --color-surface-error-light: #1a0a0d;
+  --color-surface-warning: #ff6b00;
+  --color-surface-warning-light: #fff1e6;
+
+  --color-text-headings: #f2f2f2;
+  --color-text-body-1: #cccccc;
+  --color-text-body-2: #e5e5e5;
+  --color-text-body-3: #cccccc;
+  --color-text-body-4: #999999;
+  --color-text-action: #e9f4ff;
+  --color-text-action-hover: #b0bddc;
+  --color-text-on-action: #ffffff;
+  --color-text-disabled: #999999;
+  --color-text-info: #666cff;
+  --color-text-success: #04d268;
+  --color-text-warning: #ff6b00;
+  --color-text-error: #ff4e64;
+
+  --color-icon-heading: #ffffff;
+  --color-icon-default: #f2f2f2;
+  --color-icon-secondary: #e5e5e5;
+  --color-icon-tertiary: #cccccc;
+  --color-icon-subtle: #b3b3b3;
+  --color-icon-action: #e9f4ff;
+  --color-icon-action-hover: #b0bddc;
+  --color-icon-on-action: #ffffff;
+  --color-icon-disabled: #999999;
+  --color-icon-info: #666cff;
+  --color-icon-success: #04d268;
+  --color-icon-warning: #ff6b00;
+  --color-icon-error: #ff4e64;
+
+  --color-border-default: #333333;
+  --color-border-white: #000000;
+  --color-border-action: #e9f4ff;
+  --color-border-action-hover: #b0bddc;
+  --color-border-action-light: #001d65;
+  --color-border-focus: #8a9dcb;
+  --color-border-disabled: #b3b3b3;
+  --color-border-success: #014a24;
+  --color-border-error: #591b23;
+  --color-border-warning: #662b00;
+  --color-border-info: #000466;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-surface-page: #000000;
+    --color-surface-background: #000000;
+    --color-surface-card: #191919;
+    --color-surface-shade-1: #191919;
+    --color-surface-shade-2: #333333;
+    --color-surface-shade-3: #4d4d4d;
+    --color-surface-action: #3354a5;
+    --color-surface-action-hover: #5470b3;
+    --color-surface-action-light: #1c2431;
+    --color-surface-disabled: #e5e5e5;
+    --color-surface-success: #03a853;
+    --color-surface-success-light: #014a24;
+    --color-surface-error: #ff4e64;
+    --color-surface-error-light: #1a0a0d;
+    --color-surface-warning: #ff6b00;
+    --color-surface-warning-light: #fff1e6;
+
+    --color-text-headings: #f2f2f2;
+    --color-text-body-1: #cccccc;
+    --color-text-body-2: #e5e5e5;
+    --color-text-body-3: #cccccc;
+    --color-text-body-4: #999999;
+    --color-text-action: #e9f4ff;
+    --color-text-action-hover: #b0bddc;
+    --color-text-on-action: #ffffff;
+    --color-text-disabled: #999999;
+    --color-text-info: #666cff;
+    --color-text-success: #04d268;
+    --color-text-warning: #ff6b00;
+    --color-text-error: #ff4e64;
+
+    --color-icon-heading: #ffffff;
+    --color-icon-default: #f2f2f2;
+    --color-icon-secondary: #e5e5e5;
+    --color-icon-tertiary: #cccccc;
+    --color-icon-subtle: #b3b3b3;
+    --color-icon-action: #e9f4ff;
+    --color-icon-action-hover: #b0bddc;
+    --color-icon-on-action: #ffffff;
+    --color-icon-disabled: #999999;
+    --color-icon-info: #666cff;
+    --color-icon-success: #04d268;
+    --color-icon-warning: #ff6b00;
+    --color-icon-error: #ff4e64;
+
+    --color-border-default: #333333;
+    --color-border-white: #000000;
+    --color-border-action: #e9f4ff;
+    --color-border-action-hover: #b0bddc;
+    --color-border-action-light: #001d65;
+    --color-border-focus: #8a9dcb;
+    --color-border-disabled: #b3b3b3;
+    --color-border-success: #014a24;
+    --color-border-error: #591b23;
+    --color-border-warning: #662b00;
+    --color-border-info: #000466;
+
+    color-scheme: dark;
+  }
+}
+
+/* ============================== MOBILE ==================================== */
+/* Mobile designs in Figma are 393px wide. */
+@media (max-width: 767px) {
+  :root {
+    --section-eyebrow-size: 16px;
+    --section-title-size: 24px;
+    --section-desc-size: 12px;
+    --text-display-1: 34px;   /* hero title on mobile */
+    --section-pad-x: 16px;
+    --section-pad-y: 48px;
+    --gutter: 16px;
+  }
+}
